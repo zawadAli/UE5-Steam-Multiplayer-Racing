@@ -16,4 +16,9 @@ class MULTIPLAYERRACINGCAR_API ALobbyGameMode : public AGameMode
 	
 public:
 	virtual void PostLogin(APlayerController* NewPlayer) override;
+
+private:
+	bool bStartedTravel = false;
+
+	int32 GetExpectedPlayerCount() const;
 };
